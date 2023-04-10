@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    font-family: 'MinhaFontePersonalizada', sans-serif;
+}
+
+nav {
+    background-color: #3f0e40;
+    color: #42f5e9;
+}
+
+nav a {
+    color: #42f5e9;
+}
+
+.conteudo {
+    color: white;
+    background-color: #280f27;
+}
