@@ -7,7 +7,7 @@ from .forms import ChatForm
 
 # Create your views here.
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 
 def post_list(request):

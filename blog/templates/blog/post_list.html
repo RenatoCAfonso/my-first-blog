@@ -10,9 +10,8 @@
 
     <style>
       .my-component {
-        height: 600px;
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
         padding: 20px;
       }
 
@@ -34,7 +33,10 @@
       }
       .btn-link{
         text-decoration: none !important;
-        font-weight: bold !important;
+        color: inherit !important;
+        text-align: left !important;
+        padding: 0 !important;
+        width: auto !important;
       }
       
     </style>
@@ -54,8 +56,7 @@
     <nav class="navbar navbar-dark bg-dark" style="background-color: #3f0e40;">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-            NEPER
+            NEPER - 2023
           </a>
         </div>
     </nav>
@@ -75,7 +76,7 @@
             <div class="card-footer">
               <div class="row justify-content-center">
                 <div class="col-auto">
-                  <p class="card-text"><a href="#" class="btn btn-primary" onclick="toggleVisibility('#intro','#init')" style="margin: 10px;">Iniciar</a></p>
+                  <p class="card-text"><a href="#" class="btn btn-light" onclick="toggleVisibility('#intro','#init')" style="margin: 10px; width: 140px;"><b>INICIAR</b></a></p>
                 </div>
               </div>
             </div>
@@ -91,18 +92,15 @@
     <div id="intro" style="display:none">
       <div class="row justify-content-center">
         <div style="height:100px"></div>
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Introdução</h1>
-          <p>O aplicativo foi construído com base nas consultorias realizadas pelo Núcleo de Estratégias em Planejamento Experimental e Reprodutibilidade que, desde o inicio de suas atividades (2019), está orientado para atender às demandas internas do Instituto de Ciências Biomédicas da USP (São Paulo).</p>
-          <p>As sugestões aqui apresentadas para o desenho do planejamento experimental têm como base as dúvidas frequentes dos pesquisadores que são discutidas em nossos atendimentos e, portanto, poderão ser atualizadas quando necessário.</p>
+          <p>O aplicativo foi construído com base nas consultorias realizadas pelo Núcleo de Estratégias em Planejamento Experimental e Reprodutibilidade que, desde o inicio de suas atividades (2019), está orientado para atender às demandas internas do Instituto de Ciências Biomédicas da Universidade de São Paulo.</p>
+          <p>As sugestões aqui apresentadas para o desenho do planejamento experimental foram desenvolvidas utilizando as dúvidas frequentes dos pesquisadores que são discutidas em nossos atendimentos e, portanto, poderão ser atualizadas quando necessário. Desta forma, iniciamos questionando sobre o objetivo do experimento (se exploratório ou explicativo), pois entendemos que as técnicas estatísticas escolhidas diferem, principalmente, neste momento; não serão tratados passos anteriores à este.</p>
           <p>Recomenda-se utilizar o aplicativo como um guia de sugestões e não necessariamente poderá substituir as decisões finais dos pesquisadores envolvidos no projeto.</p>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-4">
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_one','#intro')">>>>></a>
-          </div>
-        </div>
-        
+          <p>
+            <a href="#" class="btn btn-link p-0" onclick="toggleVisibility('#step_one','#intro')">>>>></a>
+          </p>        
+        </div>        
       </div>
     </div>
     
@@ -110,18 +108,16 @@
     <div id="step_one" style="display:none">
       <div class="row justify-content-center">
         <div style="height:100px"></div>
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Definir os objetivos  da pesquisa</h1>
-          <p><b>Opção 01- Pesquisa Exploratória:</b></p>
-          <p>Esse tipo de pesquisa tem como objetivo proporcionar uma introdução do pesquisador ao tema em questão, a fim de que ele possa se familiarizar com os fatos e fenômenos que serão estudados e, frequentemente, há escassez de recursos teóricos disponíveis.</p>
-          <p><b>Opção 02- Pesquisa Explicativa:</b></p>
-          <p>O objetivo principal é explicar os fatores que determinam a ocorrência de um fenômeno, processo ou fato. Essa é uma consequência natural da pesquisa exploratória realizada anteriormente.</p>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-4">
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_two_one', '#step_one')">Opção 01</a>
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_two_two', '#step_one')">Opção 02</a>
-          </div>
+          <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_two_one', '#step_one')">
+            <p class="animate-typing"><b>Opção 01- Pesquisa Exploratória:</b></p>
+            <p class="animate-typing">Esse tipo de pesquisa tem como objetivo proporcionar uma introdução do pesquisador ao tema em questão, a fim de que ele possa se familiarizar com os fatos e fenômenos que serão estudados e, frequentemente, há escassez de recursos teóricos disponíveis.</p>
+          </a>   
+          <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_two_two', '#step_one')">
+            <p class="animate-typing"><b>Opção 02- Pesquisa Explicativa:</b></p>
+            <p class="animate-typing">O objetivo principal é explicar os fatores que determinam a ocorrência de um fenômeno, processo ou fato. Essa é uma consequência natural da pesquisa exploratória realizada anteriormente.</p>
+          </a>
         </div>
         
       </div>
@@ -130,23 +126,21 @@
     <!-- Passo 02 > caminho 01 -->
     <div id="step_two_one" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_two_one')"> Objetivos da Pesquisa/</a>  
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Quantas variáveis respostas serão analisadas?</h1>
-          <p><b>Opção 01- Apenas uma</b></p>
-          <br>
-          <p><b>Opção 02- Duas ou mais</b></p>
-          <br>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-4">
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_three_one_one', '#step_two_one')">Opção 01</a>
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_three_two_one', '#step_two_one')">Opção 02</a>
-          </div>
+          <p><a href="#" class="btn btn-link" onclick="toggleVisibility('#step_three_one_one', '#step_two_one')">
+            <b>Opção 01- Apenas uma</b>
+            <br>
+          </a></p>
+          <p><a href="#" class="btn btn-link" onclick="toggleVisibility('#step_three_two_one', '#step_two_one')">
+            <b>Opção 02- Duas ou mais</b>
+            <br>
+          </a></p>
         </div>
       </div>
     </div>
@@ -154,23 +148,21 @@
     <!-- Passo 02 > caminho 02 -->
     <div id="step_two_two" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_two_two')">Objetivos da Pesquisa/</a>  
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Definir o tipo de variável resposta</h1>
-          <p><b>Opção 01 - Variável qualitativa</b></p>
-          <p>Variáveis qualitativas ou categóricas são aquelas que não podem ser expressas numericamente e são representadas por uma característica própria da variável, como qualidade, atributo ou categoria. Ex: cor dos olhos, grupo sanguíneo.</p>
-          <p><b>Opção 02 - Variável quantitativa</b></p>
-          <p>As variáveis quantitativas são aquelas cujos dados são representados por valores numéricos que expressam quantidades, podendo ser subdivididas em duas categorias: contínuas e discretas. Ex: peso, pressão arterial, temperatura.</p>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-4">
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_three_one_two', '#step_two_two')">Opção 01</a>
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_three_two_two', '#step_two_two')">Opção 02</a>
-          </div>
+          <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_three_one_two', '#step_two_two')">
+            <p><b>Opção 01 - Variável qualitativa</b></p>
+            <p>Variáveis qualitativas ou categóricas são aquelas que não podem ser expressas numericamente e são representadas por uma característica própria da variável, como qualidade, atributo ou categoria. Ex: cor dos olhos, grupo sanguíneo.</p>
+          </a>
+          <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_three_two_two', '#step_two_two')">
+            <p><b>Opção 02 - Variável quantitativa</b></p>
+            <p>As variáveis quantitativas são aquelas cujos dados são representados por valores numéricos que expressam quantidades, podendo ser subdivididas em duas categorias: contínuas e discretas. Ex: peso, pressão arterial, temperatura.</p>
+          </a>          
         </div>
       </div>
     </div>
@@ -178,20 +170,20 @@
     <!-- Passo 03 > caminho 01 01 -->
     <div id="step_three_one_one" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_three_one_one')"> Objetivos da Pesquisa/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_two_one', '#step_three_one_one')">Variáveis Resposta/</a>  
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Relatório Final</h1>
           <p>A pesquisa exploratória não exige uma confirmação efetiva de alguma suposição sob estudo, servindo como instrumento para levantar hipóteses que serão  testadas posteriormente em um estudo confirmatório (pesquisa explicativa).</p>
           <p>Por esse motivo, não existe uma preocupação inicial com o tamanho amostral, pois pretende-se  ter uma noção da variabilidade dos dados com esse tipo de pesquisa, sem necessariamente objetivar um teste inferencial, apesar de ser possível realizá-lo admitindo um poder de teste relaxado (implicando um aumento no erro tipo 2) com alfa de 10% a 15% e sem correção para os contrastes.</p>
           <p>Os relatórios a serem desenvolvidos devem conter análises descritivas, utilizando gráficos, medidas resumo (média, desvio padrão..) e é sugerido priorizar testes paramétricos (ex: ANOVA) quando necessário.</p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-md-4">
             <a href="#" class="btn btn-link" onclick="toggleVisibility('#final', '#step_three_one_one')">Finalizar</a>
           </div>
         </div>
@@ -201,13 +193,13 @@
     <!-- Passo 03 > caminho 02 01 -->
     <div id="step_three_two_one" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_three_two_one')"> Objetivos da Pesquisa/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_two_one', '#step_three_two_one')">Variáveis Resposta/</a>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Relatório Final</h1>
           <p>A pesquisa exploratória não exige uma confirmação efetiva de alguma suposição sob estudo, servindo como instrumento para levantar hipóteses que serão  testadas posteriormente em um estudo confirmatório (pesquisa explicativa).</p>
           <p>Por esse motivo, não existe uma preocupação inicial com o tamanho amostral, pois pretende-se  ter uma noção da variabilidade dos dados com esse tipo de pesquisa, sem necessariamente objetivar um teste inferencial, apesar de ser possível realizá-lo admitindo um poder de teste relaxado (implicando um aumento no erro tipo 2) com alfa de 10% a 15% e sem correção para os contrastes.</p>
@@ -215,163 +207,79 @@
           <p>Obs: no estudo exploratório, é possível testar as variáveis respostas de forma independente, sem aplicar correções para o erro tipo 1.</p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-md-4">
             <a href="#" class="btn btn-link" onclick="toggleVisibility('#final', '#step_three_two_one')">Finalizar</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div id="step_three_two_one" style="display:none">
-      <div class="row justify-content-center">
-        <div class="col-5">
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_one', '#step_three_two_one')">Objetivos da Pesquisa</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_two_one', '#step_three_two_one')">Variáveis Resposta</a>   
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Relatório Final</h5>
-              <p class="card-text">
-                <br>
-                <p>A pesquisa exploratória não exige uma confirmação efetiva de alguma suposição sob estudo, servindo como instrumento para levantar hipóteses que serão  testadas posteriormente em um estudo confirmatório (pesquisa explicativa).</p>
-                <p>Por esse motivo, não existe uma preocupação inicial com o tamanho amostral, pois pretende-se  ter uma noção da variabilidade dos dados com esse tipo de pesquisa, sem necessariamente objetivar um teste inferencial, apesar de ser possível realizá-lo admitindo um poder de teste relaxado (implicando um aumento no erro tipo 2) com alfa de 10% a 15% e sem correção para os contrastes.</p>
-                <p>Os relatórios a serem desenvolvidos devem conter análises descritivas, utilizando gráficos, medidas resumo (média, desvio padrão..) e é sugerido priorizar testes paramétricos (ex: ANOVA) quando necessário.</p>
-                <p>Obs: no estudo exploratório, é possível testar as variáveis respostas de forma independente, sem aplicar correções para o erro tipo 1.</p>
-              </p>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#final', '#step_three_two_one')">Finalizar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
+    
     <!-- Passo 03 > caminho 01 02 -->
     <div id="step_three_one_two" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_three_one_two')"> Objetivos da Pesquisa/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_two_two', '#step_three_one_two')">Variáveis Resposta/</a>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Defina a Variável Resposta Qualitativa</h1>
-          <p><b>Opção 01- Nominal</b></p>
-          <p>Não existe ordenação entre as categorias - ex: cor dos olhos, sexo do animal.</p>
-          <p><b>Opção 02- Ordinal</b></p>
-          <p>Valores que expressam atributos, porém com alguma ordem - ex: resposta do paciente (nenhuma melhora, alguma melhora, muita melhora).</p>
-          <p><b>Opção 03- Dicotômica</b></p>
-          <p>Admite dois valores - ex: sim ou não; 0 ou 1.</p>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-4">
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_one_one_two', '#step_three_one_two')">Opção 01</a>
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_two_one_two', '#step_three_one_two')">Opção 02</a>
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_three_one_two', '#step_three_one_two')">Opção 03</a>
-          </div>
+          <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_one_one_two', '#step_three_one_two')">
+            <p><b>Opção 01- Nominal</b></p>
+            <p>Não existe ordenação entre as categorias - ex: cor dos olhos, sexo do animal.</p>
+          </a>
+          <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_two_one_two', '#step_three_one_two')">
+            <p><b>Opção 02- Ordinal</b></p>
+            <p>Valores que expressam atributos, porém com alguma ordem - ex: resposta do paciente (nenhuma melhora, alguma melhora, muita melhora).</p>
+          </a>
+          <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_three_one_two', '#step_three_one_two')">
+            <p><b>Opção 03- Dicotômica</b></p>
+            <p>Admite dois valores - ex: sim ou não; 0 ou 1.</p>
+          </a>
         </div>
       </div>
     </div>
-    <!-- <div id="step_three_one_two" style="display:none">
-      <div class="row justify-content-center">
-        <div class="col-5">
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_one', '#step_three_one_two')">Objetivos da Pesquisa</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_two_two', '#step_three_one_two')">Variáveis Resposta</a>   
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Defina a Variável Resposta Qualitativa</h5>
-              <p class="card-text">
-                <br>
-                <p><b>Opção 01- Nominal</b></p>
-                <p>Não existe ordenação entre as categorias - ex: cor dos olhos, sexo do animal.</p>
-                <p><b>Opção 02- Ordinal</b></p>
-                <p>Valores que expressam atributos, porém com alguma ordem - ex: resposta do paciente (nenhuma melhora, alguma melhora, muita melhora).</p>
-                <p><b>Opção 03- Dicotômica</b></p>
-                <p>Admite dois valores - ex: sim ou não; 0 ou 1.</p>
-              </p>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_four_one_one_two', '#step_three_one_two')">Opção 01</a>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_four_two_one_two', '#step_three_one_two')">Opção 02</a>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_four_three_one_two', '#step_three_one_two')">Opção 03</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
+    
     <!-- Passo 03 > caminho 01 02 02 -->
     <div id="step_three_two_two" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_three_two_two')"> Objetivos da Pesquisa/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_two_two', '#step_three_two_two')">Variáveis Resposta/</a>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Definir as variáveis independentes (preditoras)</h1>
           <p>Entende-se por fator fixo a variável independente qualitativa utilizada pelo experimento, cujos valores são representados pelos n-níveis que ela pode assumir. Fatores aleatórios são representativos da fonte de variabilidade e seus níveis são uma amostra representativa da população alvo.</p>
-          <p><b>Opção 01- Fatores Fixo</b></p>
-          <p><b>Opção 02- Fator fixo com variável contínua</b></p>
-          <p><b>Opção 03- Fatores aleatórios (com ou sem fatores fixos)</b></p>
-          <p><b>Opção 04- Variável contínua</b></p>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-4">
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_one_two_two', '#step_three_two_two')">Opção 01</a>
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_two_two_two', '#step_three_two_two')">Opção 02</a>
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_three_two_two', '#step_three_two_two')">Opção 03</a>
-            <a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_four_two_two', '#step_three_two_two')">Opção 04</a>
-          </div>
+          <p><a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_one_two_two', '#step_three_two_two')">
+            <b>Opção 01- Fatores Fixo</b>
+          </a></p>
+          <p><a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_two_two_two', '#step_three_two_two')">
+            <b>Opção 02- Fator fixo com variável contínua</b>
+          </a></p>
+          <p><a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_three_two_two', '#step_three_two_two')">
+            <b>Opção 03- Fatores aleatórios (com ou sem fatores fixos)</b>
+          </a></p>
+          <p><a href="#" class="btn btn-link" onclick="toggleVisibility('#step_four_four_two_two', '#step_three_two_two')">
+            <b>Opção 04- Variável contínua</b>
+          </a></p>
         </div>
       </div>
     </div>
-    <!-- <div id="step_three_two_two" style="display:none">
-      <div class="row justify-content-center">
-        <div class="col-5">
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_one', '#step_three_two_two')">Objetivos da Pesquisa</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_two_two', '#step_three_two_two')">Variáveis Resposta</a>   
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Definir as variáveis independentes (preditoras)</h5>
-              <p class="card-text">
-                <br>
-                <p>Entende-se por fator fixo a variável independente qualitativa utilizada pelo experimento, cujos valores são representados pelos n-níveis que ela pode assumir. Fatores aleatórios são representativos da fonte de variabilidade e seus níveis são uma amostra representativa da população alvo.</p>
-                <p><b>Opção 01- Fatores Fixo</b></p>
-                <p><b>Opção 02- Fator fixo com variável contínua</b></p>
-                <p><b>Opção 03- Fatores aleatórios (com ou sem fatores fixos)</b></p>
-                <p><b>Opção 04- Variável contínua</b></p>
-              </p>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_four_one_two_two', '#step_three_two_two')">Opção 01</a>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_four_two_two_two', '#step_three_two_two')">Opção 02</a>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_four_three_two_two', '#step_three_two_two')">Opção 03</a>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_four_four_two_two', '#step_three_two_two')">Opção 04</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <!-- Passo 04 > caminho 01 02 02-->
     <div id="step_four_one_two_two" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_four_one_two_two')">Objetivos da Pesquisa/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_two_two', '#step_four_one_two_two')">Variáveis Resposta/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_three_two_two', '#step_four_one_two_two')">Variáveis Preditoras/</a>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component-two">
+        <div class="col-md-4 my-component-two">
           <h1>Relatório Final</h1>
           <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
           <p><b>Testes utilizados com suposição de normalidade aceita - PARAMÉTRICOS</b></p>
@@ -398,216 +306,96 @@
           <p><b>Tamanho amostral:</b> Visando garantir as suposições do modelo, importante selecionar o tamanho amostral com cautela; realizar testes em softwares (ex:G*Power ) e utilizar estudos prévios são recomendações para identificar a variabilidade dos dados e assim acertar o tamanho correto.</p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-md-4">
             <a href="#" class="btn btn-link" onclick="toggleVisibility('#final', '#step_four_one_two_two')">Finalizar</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div id="step_four_one_two_two" style="display:none">
-      <div class="row justify-content-center">
-        <div class="col-5">
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_one', '#step_four_one_two_two')">Objetivos da Pesquisa</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_two_two', '#step_four_one_two_two')">Variáveis Resposta</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_three_two_two', '#step_four_one_two_two')">Variáveis Preditoras</a>   
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Relatório Final</h5>
-              <p class="card-text">
-                <br>
-                <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
-                <p><b>Testes utilizados com suposição de normalidade aceita - PARAMÉTRICOS</b></p>
-                <p>1 grupo - Teste-t</p>
-                <p>Grupos Independentes:
-                  <span style="display: block; line-height: 1em;">2 grupos ou mas - ANOVA</span>
-                </p>
-                <p>Grupos Dependentes:
-                  <span style="display: block; line-height: 1em;">2 grupos: teste-t pareado</span>
-                  <span style="display: block; line-height: 1em;">3 ou mais: ANOVA com medidas repetidas</span>
-                </p>
-                <p><b>Testes utilizados com suposição de normalidade rejeitada - NÃO-PARAMÉTRICOS</b></p>
-                <p>1 grupo - Wilcoxom (teste dos sinais)</p>
-                <p>Grupos Independentes:
-                  <span style="display: block; line-height: 1em;">2 grupos - Mann-Whitney</span>
-                  <span style="display: block; line-height: 1em;">3 ou mais grupos - Kruskal-Wallis</span>
-                </p>
-                <p>Grupos Dependentes:
-                  <span style="display: block; line-height: 1em;">2 grupos - Wilcoxon (Wilcoxon Pareado, Teste dos Sinais)
-                    </span>
-                  <span style="display: block; line-height: 1em;">3 grupos ou mais - Friedman </span>
-                </p>
-                <p>Após ajustar o modelo, importante checar todas as suposições pertinentes e realizar testes para comparações de contrastes quando necessário. Utilizar MANOVA quando existirem múltiplas variáveis resposta.</p>
-                <p><b>Tamanho amostral:</b> Visando garantir as suposições do modelo, importante selecionar o tamanho amostral com cautela; realizar testes em softwares (ex:G*Power ) e utilizar estudos prévios são recomendações para identificar a variabilidade dos dados e assim acertar o tamanho correto.</p>
-              </p>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#final', '#step_four_one_two_two')">Finalizar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
+    
     <!-- Passo 04 > caminho 02 02 02-->
     <div id="step_four_two_two_two" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_four_two_two_two')">Objetivos da Pesquisa/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_two_two', '#step_four_two_two_two')">Variáveis Resposta/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_three_two_two', '#step_four_two_two_two')">Variáveis Preditoras/</a>   
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Relatório Final</h1>
           <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
           <p><b>Modelo estatiśtico sugerido: ANCOVA</b></p>
           <p><b>Tamanho amostral:</b>Visando garantir as suposições do modelo, importante selecionar o tamanho amostral com cautela; realizar testes em softwares (ex: ) e utilizar estudos prévios são recomendações para identificar a variabilidade dos dados e assim acertar o tamanho correto.</p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-md-4">
             <a href="#" class="btn btn-link" onclick="toggleVisibility('#final', '#step_four_two_two_two')">Finalizar</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div id="step_four_two_two_two" style="display:none">
-      <div class="row justify-content-center">
-        <div class="col-5">
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_one', '#step_four_two_two_two')">Objetivos da Pesquisa</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_two_two', '#step_four_two_two_two')">Variáveis Resposta</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_three_two_two', '#step_four_two_two_two')">Variáveis Preditoras</a>   
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Relatório Final</h5>
-              <p class="card-text">
-                <br>
-                <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
-                <p><b>Modelo estatiśtico sugerido: ANCOVA</b></p>
-                <p><b>Tamanho amostral:</b>Visando garantir as suposições do modelo, importante selecionar o tamanho amostral com cautela; realizar testes em softwares (ex: ) e utilizar estudos prévios são recomendações para identificar a variabilidade dos dados e assim acertar o tamanho correto.</p>
-              </p>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#final', '#step_four_two_two_two')">Finalizar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
+    
     <!-- Passo 04 > caminho 03 02 02-->
     <div id="step_four_three_two_two" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_four_three_two_two')">Objetivos da Pesquisa/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_two_two', '#step_four_three_two_two')">Variáveis Resposta/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_three_two_two', '#step_four_three_two_two')">Variáveis Preditoras/</a>   
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Relatório Final</h1>
           <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
           <p><b>Modelo estatiśtico sugerido: Modelos Mistos</b></p>
           <p><b>Tamanho amostral:</b>Visando garantir as suposições do modelo, importante selecionar o tamanho amostral com cautela; realizar testes em softwares (ex: ) e utilizar estudos prévios são recomendações para identificar a variabilidade dos dados e assim acertar o tamanho correto.</p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-md-4">
             <a href="#" class="btn btn-link" onclick="toggleVisibility('#final', '#step_four_three_two_two')">Finalizar</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div id="step_four_three_two_two" style="display:none">
-      <div class="row justify-content-center">
-        <div class="col-5">
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_one', '#step_four_three_two_two')">Objetivos da Pesquisa</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_two_two', '#step_four_three_two_two')">Variáveis Resposta</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_three_two_two', '#step_four_three_two_two')">Variáveis Preditoras</a>   
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Relatório Final</h5>
-              <p class="card-text">
-                <br>
-                <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
-                <p><b>Modelo estatiśtico sugerido: Modelos Mistos</b></p>
-                <p><b>Tamanho amostral:</b>Visando garantir as suposições do modelo, importante selecionar o tamanho amostral com cautela; realizar testes em softwares (ex: ) e utilizar estudos prévios são recomendações para identificar a variabilidade dos dados e assim acertar o tamanho correto.</p>
-              </p>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#final', '#step_four_three_two_two')">Finalizar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- -->
+    
     <!-- Passo 04 > caminho 04 02 02-->
     <div id="step_four_four_two_two" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_four_four_two_two')">Objetivos da Pesquisa/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_two_two', '#step_four_four_two_two')">Variáveis Resposta/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_three_two_two', '#step_four_four_two_two')">Variáveis Preditoras/</a>      
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Relatório Final</h1>
           <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
           <p><b>Modelo estatiśtico sugerido: Regressão Linear</b></p>
           <p><b>Tamanho amostral:</b>Visando garantir as suposições do modelo, importante selecionar o tamanho amostral com cautela; realizar testes em softwares (ex: ) e utilizar estudos prévios são recomendações para identificar a variabilidade dos dados e assim acertar o tamanho correto.</p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-md-4">
             <a href="#" class="btn btn-link" onclick="toggleVisibility('#final', '#step_four_four_two_two')">Finalizar</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div id="step_four_four_two_two" style="display:none">
-      <div class="row justify-content-center">
-        <div class="col-5">
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_one', '#step_four_four_two_two')">Objetivos da Pesquisa</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_two_two', '#step_four_four_two_two')">Variáveis Resposta</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_three_two_two', '#step_four_four_two_two')">Variáveis Preditoras</a>   
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Relatório Final</h5>
-              <p class="card-text">
-                <br>
-                <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
-                <p><b>Modelo estatiśtico sugerido: Regressão Linear</b></p>
-                <p><b>Tamanho amostral:</b>Visando garantir as suposições do modelo, importante selecionar o tamanho amostral com cautela; realizar testes em softwares (ex: ) e utilizar estudos prévios são recomendações para identificar a variabilidade dos dados e assim acertar o tamanho correto.</p>
-              </p>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#final', '#step_four_four_two_two')">Finalizar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
+    
     <!-- Passo 04 > caminho 01 01 02-->
     <div id="step_four_one_one_two" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_four_one_one_two')">Objetivos da Pesquisa/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_two_two', '#step_four_one_one_two')">Variáveis Resposta/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_three_one_two', '#step_four_one_one_two')">Variáveis Preditoras/</a>      
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component-two">
+        <div class="col-md-4 my-component-two">
           <h1>Relatório Final</h1>
           <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
           <p><b>Testes estatísticos para análise univariada</b></p>
@@ -624,59 +412,24 @@
           <p><b>Tamanho amostral:</b>Em geral, modelos com variável resposta qualitativa exigem um tamanho amostral (n) maior do que modelos com variável resposta quantitativa; importante escolher o tamanho amostral com cautela, realizando testes em softwares (ex:G*Power ) e avaliando a variabilidade dos dados em estudos prévios.</p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-md-4">
             <a href="#" class="btn btn-link" onclick="toggleVisibility('#final', '#step_four_one_one_two')">Finalizar</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div id="step_four_one_one_two" style="display:none">
-      <div class="row justify-content-center">
-        <div class="col-5">
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_one', '#step_four_one_one_two')">Objetivos da Pesquisa</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_two_two', '#step_four_one_one_two')">Variáveis Resposta</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_three_one_two', '#step_four_one_one_two')">Variáveis Preditoras</a>   
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Relatório Final</h5>
-              <p class="card-text">
-                <br>
-                <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
-                <p><b>Testes estatísticos para análise univariada</b></p>
-                <p>Grupos Independentes:
-                  <span style="display: block; line-height: 1em;">2 grupos - Teste exato de Fisher</span>
-                  <span style="display: block; line-height: 1em;">2 ou mais grupos: Qui-quadrado </span>
-                </p>
-                <p>Grupos Dependentes:
-                  <span style="display: block; line-height: 1em;">2 grupos - McNemar</span>
-                  <span style="display: block; line-height: 1em;">3 ou mais grupos: Q de Cochran</span>
-                </p>
-                <p><b>Teste estatístico para análise multivariada:</b></p>
-                <p>Analise do log-linear.</p>
-                <p><b>Tamanho amostral:</b>Em geral, modelos com variável resposta qualitativa exigem um tamanho amostral (n) maior do que modelos com variável resposta quantitativa; importante escolher o tamanho amostral com cautela, realizando testes em softwares (ex:G*Power ) e avaliando a variabilidade dos dados em estudos prévios.</p>
-              </p>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#final', '#step_four_one_one_two')">Finalizar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- -->
+    
     <!-- Passo 04 > caminho 01 01 02-->
     <div id="step_four_two_one_two" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_four_two_one_two')">Objetivos da Pesquisa/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_two_two', '#step_four_two_one_two')">Variáveis Resposta/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_three_one_two', '#step_four_two_one_two')">Variáveis Preditoras/</a>      
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component-two">
+        <div class="col-md-4 my-component-two">
           <h1>Relatório Final</h1>
             <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
             <p><b>Testes estatísticos para análise univariada</b></p>
@@ -691,57 +444,24 @@
             <p><b>Tamanho amostral:</b>Em geral, modelos com variável resposta qualitativa exigem um tamanho amostral (n) maior do que modelos com variável resposta quantitativa; importante escolher o tamanho amostral com cautela, realizando testes em softwares (ex:G*Power ) e avaliando a variabilidade dos dados em estudos prévios.</p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-md-4">
             <a href="#" class="btn btn-link" onclick="toggleVisibility('#final', '#step_four_two_one_two')">Finalizar</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div id="step_four_two_one_two" style="display:none">
-      <div class="row justify-content-center">
-        <div class="col-5">
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_one', '#step_four_two_one_two')">Objetivos da Pesquisa</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_two_two', '#step_four_two_one_two')">Variáveis Resposta</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_three_one_two', '#step_four_two_one_two')">Variáveis Preditoras</a>   
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Relatório Final</h5>
-              <p class="card-text">
-                <br>
-                <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
-                <p><b>Testes estatísticos para análise univariada</b></p>
-                <p>Grupos Independentes:
-                  <span style="display: block; line-height: 1em;">2 grupos - Mann-Whitney (Wilcoxon não-pareado)</span>
-                  <span style="display: block; line-height: 1em;">3 ou mais grupos: Kruskal-Wallis</span>
-                </p>
-                <p>Grupos Dependentes:
-                  <span style="display: block; line-height: 1em;">2 grupos - Wilcoxon (Wilcoxon pareado, teste dos sinais)</span>
-                  <span style="display: block; line-height: 1em;">3 ou mais grupos: Friedman</span>
-                </p>
-                <p><b>Tamanho amostral:</b>Em geral, modelos com variável resposta qualitativa exigem um tamanho amostral (n) maior do que modelos com variável resposta quantitativa; importante escolher o tamanho amostral com cautela, realizando testes em softwares (ex:G*Power ) e avaliando a variabilidade dos dados em estudos prévios.</p>
-              </p>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#final', '#step_four_two_one_two')">Finalizar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
+    
     <!-- Passo 04 > caminho 03 01 02-->
     <div id="step_four_three_one_two" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_one', '#step_four_three_one_two')"> Objetivos da Pesquisa/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_two_two', '#step_four_three_one_two')">Variáveis Resposta/</a>
           <a href="#" class="btn btn-link my-5" onclick="toggleVisibility('#step_three_one_two', '#step_four_three_one_two')">Variáveis Preditoras/</a>         
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <h1>Relatório Final</h1>
           <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
           <p><b>Modelos estatísticos para análise univariada ou multivariada</b></p>
@@ -749,99 +469,67 @@
           <p><b>Tamanho amostral:</b>Em geral, modelos com variável resposta qualitativa exigem um tamanho amostral (n) maior do que modelos com variável resposta quantitativa; importante escolher o tamanho amostral com cautela, realizando testes em softwares (ex:G*Power ) e avaliando a variabilidade dos dados em estudos prévios.</p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-md-4">
             <a href="#" class="btn btn-link" onclick="toggleVisibility('#final', '#step_four_three_one_two')">Finalizar</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div id="step_four_three_one_two" style="display:none">
-      <div class="row justify-content-center">
-        <div class="col-5">
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_one', '#step_four_three_one_two')">Objetivos da Pesquisa</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_two_two', '#step_four_three_one_two')">Variáveis Resposta</a>
-          <a href="#" class="btn btn-primary" onclick="toggleVisibility('#step_three_one_two', '#step_four_three_one_two')">Variáveis Preditoras</a>   
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Relatório Final</h5>
-              <p class="card-text">
-                <br>
-                <p>A pesquisa explicativa deve ser conduzida principalmente para confirmar hipóteses de interesse com base nas análises realizadas previamente em outros estudos, comumente em estudos explicativos. Foco no poder estatístico (recomenda-se utilizar alfa de 5% para erro tipo 1).</p>
-                <p><b>Modelos estatísticos para análise univariada ou multivariada</b></p>
-                <p>Regressão Logística</p>
-                <p><b>Tamanho amostral:</b>Em geral, modelos com variável resposta qualitativa exigem um tamanho amostral (n) maior do que modelos com variável resposta quantitativa; importante escolher o tamanho amostral com cautela, realizando testes em softwares (ex:G*Power ) e avaliando a variabilidade dos dados em estudos prévios.</p>
-              </p>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#final', '#step_four_three_one_two')">Finalizar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- -->
 
-  <div class="row justify-content-center">
-    <div class="col-4">
-      <h1>Chatbot</h1>
-      <ul id="chat"></ul>
-      <div id="loading" style="display: none;">Carregando...</div>
-      <form id="chat-form">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit">Enviar</button>
-      </form>
+    <div class="row justify-content-center" id="chatblock" style="display:none">
+      <div class="col-md-4">
+        <br>
+        <a href="#" class="btn btn-link" onclick="toggleVisibilityChat('#chatblockshow')">
+          <h3>Chatbot</h3>
+        </a>
+      </div>
     </div>
-  </div>
+
+    <div class="row justify-content-center" id="chatblockshow" style="display:none">
+      <div class="col-md-4">
+        <ul id="chat"></ul>
+          <div id="loading" style="display: none;">Carregando...</div>
+          <form id="chat-form">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit">Enviar</button>
+          </form>
+      </div>
+    </div>  
     
     <!-- Passo 04 > caminho 01 01 02-->
     <div id="final" style="display:none">
       <div class="row justify-content-center">
-        <div class="col-4" style="height:100px">
+        <div class="col-md-4" style="height:100px">
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-4 my-component">
+        <div class="col-md-4 my-component">
           <p><b>Esperamos que nossas sugestões possam ajudar com sua pesquisa.</b></p>
           <p><b>Em caso de dúvidas ou sugestões, por favor entre em contato.</b></p>
           <p><b>Obrigado!</b></p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-4">
+          <div class="col-md-4">
             <a href="#" class="btn btn-link" onclick="toggleVisibility('#final', '#intro')">Finalizar</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div id="final" style="display:none">
-      <div class="row justify-content-center">
-        <div class="col-5">
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">FIM</h5>
-              <p class="card-text">
-                <br>
-                <p><b>Esperamos que nossas sugestões possam ajudar com sua pesquisa.</b></p>
-                <p><b>Em caso de dúvidas ou sugestões, por favor entre em contato.</b></p>
-                <p><b>Obrigado!</b></p>
-              </p>
-              <a href="#" class="btn btn-primary" onclick="toggleVisibility('#final', '#intro')">Finalizar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- -->
+
     <script>
 
       function toggleVisibility(show,hide) {
         $(hide).toggle();
+        $(show).toggle();
+        if(hide == "#intro"){
+          $("#chatblock").toggle();
+        }
+        if(show == "#final"){
+          $("#chatblock").toggle();
+        }
+      }
+      function toggleVisibilityChat(show) {
         $(show).toggle();
       }
     
